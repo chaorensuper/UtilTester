@@ -1,5 +1,6 @@
 package com.youzhi.config;
 
+import com.youzhi.controller.DemoController;
 import com.youzhi.handler.XssHandler;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -19,7 +20,8 @@ public class DemoConfig extends JFinalConfig {
 
 	@Override
 	public void configRoute(Routes routes) {
-		
+		routes.setBaseViewPath("WEB-INF/views"); 
+		routes.add("/user", DemoController.class, "/");
 	}
 
 	@Override

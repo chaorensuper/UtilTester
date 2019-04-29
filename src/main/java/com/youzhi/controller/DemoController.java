@@ -1,5 +1,11 @@
 package com.youzhi.controller;
 
-public class DemoController {
+import com.jfinal.core.Controller;
+
+public class DemoController extends Controller {
+	
+	public void index() {
+		
+	}
 
 }
