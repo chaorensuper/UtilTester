@@ -9,13 +9,26 @@ import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.ext.handler.ContextPathHandler;
+import com.jfinal.kit.PropKit;
+import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
 
 public class DemoConfig extends JFinalConfig {
 
 	@Override
-	public void configConstant(Constants me) {
+	public void configConstant(Constants constants) {
+		constants.setDevMode(true); // ���ÿ���ģʽ
+		constants.setViewType(ViewType.JFINAL_TEMPLATE);
+		// ����ģ������
+		PropKit.use("properties/config.properties"); 
+		// ���������ļ�
 		
+		System.out.println(PropKit.get("name"));
+		
+		// �����ļ��ϴ��Ļ���·��
+		constants.setBaseUploadPath("d:\\uploadfile");
+		// �����ļ����صĻ���·��
+		constants.setBaseDownloadPath("d:\\uploadfile");
 	}
 
 	@Override

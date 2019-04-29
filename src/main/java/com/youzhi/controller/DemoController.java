@@ -5,7 +5,7 @@ import com.jfinal.core.Controller;
 public class DemoController extends Controller {
 	
 	public void index() {
-		
+		renderText("hello world"); 
 	}
 
 }
