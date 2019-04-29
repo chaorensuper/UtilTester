@@ -10,6 +10,9 @@ import org.apache.commons.lang.StringEscapeUtils;
  */
 public class BulletProofUtil {
 	
+	/**
+	 * 防止SQL注入
+	 */
 	public static String antiSQLInjection(String msg) {
 		return StringEscapeUtils.escapeSql(msg); 
 	}
